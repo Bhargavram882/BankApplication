@@ -8,7 +8,6 @@ import axios from "axios";
 // import "./Login.css";
  import store from "./store";
 import { uuid } from "uuidv4";
-import { Timestamp } from "mongodb";
 // import {useHistory} from "react-router-dom";
 function SendMoney(){
     const [username,setUsername]=useState();
