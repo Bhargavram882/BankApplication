@@ -1,0 +1,84 @@
+{
+  "loan": [
+    {
+      "id": "123",
+      "acc": "123",
+      "loan_amount": 6900,
+      "interest": "11.2%",
+      "no_of_months": "24",
+      "amount_to_be_payed": 10000
+    },
+    {
+      "id": "1235",
+      "acc": "1235",
+      "loan_amount": "10000",
+      "interest": "11.2%",
+      "no_of_months": "24",
+      "amount_to_be_payed": "20000"
+    },
+    {
+      "id": "123_50000",
+      "acc": "123",
+      "loan_amount": "50000",
+      "no_of_months": "34",
+      "interest": "34",
+      "amount_to_be_payed": 1700000
+    },
+    {
+      "id": "123_599",
+      "acc": "123",
+      "loan_amount": "599",
+      "no_of_months": "3",
+      "interest": "3",
+      "amount_to_be_payed": 1797
+    },
+    {
+      "id": "123_799",
+      "acc": "123",
+      "loan_amount": "799",
+      "no_of_months": "5",
+      "interest": "5",
+      "amount_to_be_payed": 3995
+    },
+    {
+      "id": "1234_1000",
+      "acc": "1234",
+      "loan_amount": "1000",
+      "no_of_months": "5",
+      "interest": "5",
+      "amount_to_be_payed": 4900
+    },
+    {
+      "id": "1234_10000",
+      "acc": "1234",
+      "loan_amount": "10000",
+      "no_of_months": "12",
+      "interest": "12",
+      "amount_to_be_payed": 120000
+    },
+    {
+      "id": "123_10000",
+      "acc": "123",
+      "loan_amount": "10000",
+      "no_of_months": "12",
+      "interest": "12",
+      "amount_to_be_payed": 120000
+    },
+    {
+      "id": "123_1234",
+      "acc": "123",
+      "loan_amount": "1234",
+      "no_of_months": "13",
+      "interest": "13",
+      "amount_to_be_payed": 15642
+    },
+    {
+      "id": "123_870",
+      "acc": "123",
+      "loan_amount": "870",
+      "no_of_months": "15",
+      "interest": "15",
+      "amount_to_be_payed": 13050
+    }
+  ]
+}

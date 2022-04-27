@@ -1,0 +1,116 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  background: #a9eee6;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+.head{
+    background-color: #f38181;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 1em;
+    
+}
+.header{
+  text-align: left;
+  color: #a9eee6;
+}
+.heade{
+  text-align: right;
+  color: #a9eee6;
+}
+.imgs {
+  padding-top: 20px;
+  justify-content: center;
+  display: flex;
+}
+.container-image {
+  background-color: rgb(223, 221, 221); 
+  border-radius: 150px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 115px;
+  width: 115px;
+}
+.form-box{
+    min-width: 10%;
+    height: 10vh;
+    
+    margin: 0vw;
+    padding: 5vw ;
+    position:relative; 
+    /* position:relative for .prevBtn and .nextBtn position:absolute; */
+}
+.form-box h1{
+    font-size: 35px ;
+    text-align: center;
+    color: #F55A00;
+    margin: 0 0 .5vh 0;
+}
+.form-box input, textarea{
+    
+   /* width: 20%;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;*/
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    width: 250px;
+    height: 40px;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid #f38181;
+    background: #fff;
+    color: #f38181;
+    border-radius: 40px;
+    
+    overflow: hidden;
+    
+}
+
+.form-box textarea{
+    height: 15vh;
+}
+
+  .submitBtn{
+    font-family: 'Ubuntu', sans-serif;
+    
+    
+    width: 170px;
+    height: 40px;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid #f38181;
+    background: #fff;
+    color: #f38181;
+    border-radius: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s;
+  }
+  
+  .submitBtn:hover{
+    background: #f38181;
+    color: #fff;
+  }
+  
+  .submitBtn span{
+    opacity: 1;
+    visibility: visible;
+    transition: all .35s;
+  }
+  

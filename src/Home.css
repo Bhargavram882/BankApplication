@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+   /* background: url(image1.jfif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+/*    height: 100vh;
+    overflow: hidden;
+ */   
+  }
+  .top{
+    background-image: url(glasscoin.jpeg);
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
+    
+}
+  .head{
+    background-image: linear-gradient(#437fc7, #6daffe);
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      padding: 5px 50px;
+      
+      
+  }
+  .header{
+    text-align: left;
+    
+  }
+  .heade{
+    text-align: right;
+    color: blue;
+  }
+  .imgs {
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
+  .container-image {
+    background-color: rgb(223, 221, 221); 
+    border-radius: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 115px;
+    width: 115px;
+  }
+  .form-box{
+      min-width: 10%;
+      height: 10vh;
+      
+      margin: 0vw;
+      padding: 5vw ;
+      position:relative; 
+      /* position:relative for .prevBtn and .nextBtn position:absolute; */
+  }
+  .form-box h1{
+      font-size: 35px ;
+      text-align: center;
+     
+      margin: 0 0 .5vh 0;
+  }
+  .form-box input, textarea{
+      
+     /* width: 20%;
+      padding: .5rem .8rem .5rem .8rem;
+      margin: .9vw 0 ;
+      border:0;
+      border-radius: 5px;
+      font-size: 20px;*/
+      padding: .5rem .8rem .5rem .8rem;
+      margin: .9vw 0 ;
+      width: 250px;
+      height: 40px;
+      line-height: 1;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      
+      background: #fff;
+     
+      border-radius: 40px;
+      
+      overflow: hidden;
+      
+  }
+  .hike{
+    height: 350px;
+    width: 400px;
+    background-color: rgba(87, 157, 68, 0.473);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+  }
+  .form-box textarea{
+      height: 15vh;
+  }
+  
+    .submitBtn{
+      font-family: 'Ubuntu', sans-serif;
+      
+      
+      width: 170px;
+      height: 40px;
+      line-height: 1;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+  
+      background: #fff;
+    
+      border-radius: 40px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all .35s;
+    }
+    
+    .submitBtn:hover{
+      background: #f38181;
+      color: #fff;
+    }
+    
+    .submitBtn span{
+      opacity: 1;
+      visibility: visible;
+      transition: all .35s;
+    }
