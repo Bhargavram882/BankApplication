@@ -51,7 +51,7 @@ function SendMoney(){
 
            console.log(re)
         // const response=await(trans.post("/transactions",request));
-        axios.post("http://localhost:5000/transactions/",re,{ headers: {"token":token} }).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
+        axios.post("https://appbankiiits.herokuapp.com/transactions/",re,{ headers: {"token":token} }).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
         console.log("success");
         //if(username!=undefined)
       //  history.push("/Main/Transactions/");
@@ -63,7 +63,7 @@ function SendMoney(){
         const g= async()=>{
                     console.log(idd);
                     // const response=await api2.delete(`./requestmoney/${idd}`);
-                    axios.delete("http://localhost:5000/req/"+idd,{ headers: {"token":token} }).then((res)=>{
+                    axios.delete("https://appbankiiits.herokuapp.com/req/"+idd,{ headers: {"token":token} }).then((res)=>{
                     }).catch((err)=>{
                       console.log(idd,"err fail---1");
 //                      response.status(400).json("req does not exist");
@@ -81,7 +81,7 @@ function SendMoney(){
       }
 
     const gu=async()=>{
-        const st="http://localhost:5000/users/"+store.getState().user;
+        const st="https://appbankiiits.herokuapp.com/users/"+store.getState().user;
         let all;
         let p;
         var f={};
@@ -136,11 +136,11 @@ function SendMoney(){
 
            if(username!=null)
            {
-               p="http://localhost:5000/users/"+username;
+               p="https://appbankiiits.herokuapp.com/users/"+username;
 
            }
            else
-           p="http://localhost:5000/users/"+ant;
+           p="https://appbankiiits.herokuapp.com/users/"+ant;
            axios.get(p,{ headers: {"token":token} }).then((res)=>{
             all=res.data;
             console.log(all);
@@ -172,7 +172,7 @@ function SendMoney(){
                     "to":to
                 };
             
-            const t="http://localhost:5000/dbt/"+fa+"/"+ta;
+            const t="https://appbankiiits.herokuapp.com/dbt/"+fa+"/"+ta;
 
             axios.patch(t,obj,{ headers: {"token":token} }).then((res)=>{
                 console.log(res);

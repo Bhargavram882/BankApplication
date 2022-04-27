@@ -14,7 +14,7 @@ export default function PayMoney() {
     const gu=async()=>{
            console.log("id.......",id);
          let all;
-        const st1="http://localhost:5000/loan/"+acc+"/"+id;
+        const st1="https://appbankiiits.herokuapp.com/loan/"+acc+"/"+id;
         axios.get(st1).then((res)=>{
         all= res.data
         console.log(all);
@@ -22,7 +22,7 @@ export default function PayMoney() {
                if(all.amount_to_be_payed-amount==0)// if paying amount is loan amount delete that
                {
 //                const ree=api.delete(`./loan/${all.id}`);
-                const st1="http://localhost:5000/loan/"+id;
+                const st1="https://appbankiiits.herokuapp.com/loan/"+id;
                 axios.delete(st1).then((res)=>{
                 }).catch((err)=>{
                   console.log("err fail");
@@ -41,7 +41,7 @@ export default function PayMoney() {
                {
                     all.amount_to_be_payed=all.amount_to_be_payed-amount;
               //     const rw= api.put(`./loan/${all.id}`,all)
-                   const st1="http://localhost:5000/loan/"+id;
+                   const st1="https://appbankiiits.herokuapp.com/loan/"+id;
                    const da={amount_to_be_payed :  all.amount_to_be_payed }
                    axios.patch(st1,da ).then((res)=>{
                 }).catch((err)=>{

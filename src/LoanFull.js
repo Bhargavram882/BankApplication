@@ -99,7 +99,7 @@ export default function LoanFull() {
   };
   const history=useHistory();
   const gu=async()=>{// this is for passing user name to retrieve function and get the acc number .
-        const st1="http://localhost:5000/loan/";
+        const st1="https://appbankiiits.herokuapp.com/loan/";
         axios.get(st1).then((res)=>{
           console.log("loan full",res.data );
             setLn(res.data);

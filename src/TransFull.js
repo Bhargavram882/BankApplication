@@ -110,7 +110,7 @@ function TransactionsFull(){
      
 
       const gu=async()=>{//this is to retreive the username 
-        const st1="http://localhost:5000/transactions/";
+        const st1="https://appbankiiits.herokuapp.com/transactions/";
         axios.get(st1).then((res)=>{
           console.log("trsn full",res.data );
 

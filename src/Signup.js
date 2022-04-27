@@ -22,7 +22,7 @@ function Signup(props){
         }
         else{
            
-        axios.post("http://localhost:5000/users",{"balance":Math.floor(Math.random() * 100000) + 1,
+        axios.post("https://appbankiiits.herokuapp.com/users",{"balance":Math.floor(Math.random() * 100000) + 1,
            "name":usrname1,
            "password":Password1,
            "acc":''+i1+x, 

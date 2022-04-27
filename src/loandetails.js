@@ -99,12 +99,12 @@ export default function Payloan() {
   const [ln,setLn]=useState([]);// for storing all the loan details
   const gu=async()=>{// this is for passing user name to retrieve function and get the acc number .
         console.log(store.getState().user);
-        const st="http://localhost:5000/users/"+store.getState().user;
+        const st="https://appbankiiits.herokuapp.com/users/"+store.getState().user;
         console.log(st)
         axios.get(st).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
         console.log("res data  ... ",res.data);
         const ac=res.data.acc
-        const st1="http://localhost:5000/loan/"+ac;
+        const st1="https://appbankiiits.herokuapp.com/loan/"+ac;
         axios.get(st1).then((res)=>{
           console.log(res.data);
             setLn(res.data);

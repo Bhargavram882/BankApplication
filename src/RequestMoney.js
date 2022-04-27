@@ -95,14 +95,14 @@ export default function Payloan() {// this fn gets all the requested obj by othe
         console.log(store.getState().user);
         const token=store.getState().token;
 
-        const st="http://localhost:5000/users/"+store.getState().user;
+        const st="https://appbankiiits.herokuapp.com/users/"+store.getState().user;
         console.log(st)
         axios.get(st).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
         console.log("res data  ... ",res.data);
         const ac=res.data.acc
 
         
-        const st1="http://localhost:5000/req/"+ac+"/1";
+        const st1="https://appbankiiits.herokuapp.com/req/"+ac+"/1";
         axios.get(st1,{ headers: {"token":token} }).then((res)=>{
             setLn(res.data);
         }).catch((err)=>{
@@ -122,7 +122,7 @@ export default function Payloan() {// this fn gets all the requested obj by othe
     }, [])
     const del=(ln)=>{
         console.log(ln.id)  
-        axios.delete("http://localhost:5000/req/"+ln._id).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
+        axios.delete("https://appbankiiits.herokuapp.com/req/"+ln._id).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
         console.log("success");
 
         }).catch((err)=>{

@@ -87,13 +87,13 @@ export default function Payloan() {
 
       const gu=async()=>{// thi sfunction uses the above fn etrieve
      
-        const st="http://localhost:5000/users/"+store.getState().user;
+        const st="https://appbankiiits.herokuapp.com/users/"+store.getState().user;
         console.log(st)
         axios.get(st).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
       //  console.log("res data  ... ",res.data);
         const ac=res.data.acc
         console.log(ac);
-        const st1="http://localhost:5000/loan/"+ac;
+        const st1="https://appbankiiits.herokuapp.com/loan/"+ac;
         axios.get(st1).then((res)=>{
             setLn(res.data);
     //        setItems(res.data);

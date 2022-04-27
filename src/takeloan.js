@@ -27,7 +27,7 @@ function Takeloan(){
         formdata.append('profileImg',img);
 
         
-           axios.post("http://localhost:5000/loan", formdata).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
+           axios.post("https://appbankiiits.herokuapp.com/loan", formdata).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
             console.log("loan success");
         }).catch((err)=>{
             console.log("loan fail");

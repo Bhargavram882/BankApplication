@@ -106,14 +106,14 @@ function Showrequest(){
 
       const gu=async()=>{
         console.log(store.getState().user);
-        const st="http://localhost:5000/users/"+store.getState().user;
+        const st="https://appbankiiits.herokuapp.com/users/"+store.getState().user;
         console.log(st)
         axios.get(st).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
         console.log("res data  ... ",res.data);
         const ac=res.data.acc
         const token=store.getState().token;
 
-        const st1="http://localhost:5000/req/"+ac+"/0";
+        const st1="https://appbankiiits.herokuapp.com/req/"+ac+"/0";
         axios.get(st1,{ headers: {"token":token} }).then((res)=>{
             setLn(res.data);
             setItems(res.data);

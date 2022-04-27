@@ -11,7 +11,7 @@ function Upload(){
 
       //taking the input from the user
       return (<div>
-          <form className="form-box" action="http://localhost:5000/uploadfile" enctype="multipart/form-data" method="POST">
+          <form className="form-box" action="https://appbankiiits.herokuapp.com/uploadfile" enctype="multipart/form-data" method="POST">
       <h1>Uplaod Licence</h1>
       <div className="field1">
           <input type="file" placeholder="Licence"  name="myFile"  onChange={(e)=>setFile(e.target.value)}  />

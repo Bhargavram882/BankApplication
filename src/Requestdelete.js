@@ -12,7 +12,7 @@ export default function Requestdelete() {
     const id=location.id;
     const fun=()=>{
         console.log(id);
-        axios.delete("http://localhost:5000/req/"+id).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
+        axios.delete("https://appbankiiits.herokuapp.com/req/"+id).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
         console.log("success");
         history.push("/Request");
 

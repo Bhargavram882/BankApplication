@@ -21,7 +21,7 @@ function Login(){
   if(!Password1) {
       return;
   }
-     const st="http://localhost:5000/users/"+usrname1;
+     const st="https://appbankiiits.herokuapp.com/users/"+usrname1;
 console.log(st)
      console.log(usrname1);
   axios.get(st).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.

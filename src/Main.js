@@ -24,7 +24,7 @@ function Main({user}){
 
   const gu=async()=>{
     console.log(store.getState().user);
-    const st="http://localhost:5000/users/"+store.getState().user;
+    const st="https://appbankiiits.herokuapp.com/users/"+store.getState().user;
     console.log("user in gu",st);
     axios.get(st).then((res)=>{
       const ac=res.data.balance;
