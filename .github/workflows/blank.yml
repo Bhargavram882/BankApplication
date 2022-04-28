@@ -1,0 +1,20 @@
+name: 'Notify users on file change'
+on:
+  push:
+    branches: ["*"]
+jobs:
+  notif:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dawidd6/action-send-mail@v3
+        with:
+          # Required mail server address:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.SMTP_USER}}
+          password: ${{secrets.SMTP_PASSWORD}}
+          subject: Github Actions job result
+          body: Build job of ${{github.repository}} completed successfully!
+          to: "venkateshkhandavilli326@gmail.com"
+          from: "varunakrishna1@gmail.com"
