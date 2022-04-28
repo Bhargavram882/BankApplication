@@ -8,6 +8,7 @@ import axios from "axios";
 // import "./Login.css";
  import store from "./store";
 import { uuid } from "uuidv4";
+import { Timestamp } from "mongodb";
 // import {useHistory} from "react-router-dom";
 function SendMoney(){
     const [username,setUsername]=useState();
@@ -51,19 +52,19 @@ function SendMoney(){
 
            console.log(re)
         // const response=await(trans.post("/transactions",request));
-        axios.post("https://appbankiiits.herokuapp.com/transactions/",re,{ headers: {"token":token} }).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
+        axios.post("http://localhost:5000/transactions/",re,{ headers: {"token":token} }).then((res)=>{// axios sends the http async req to end points , here we are sending to port o 4000.
         console.log("success");
         //if(username!=undefined)
       //  history.push("/Main/Transactions/");
         //else{
         if(ant==undefined){
-            history.push("/Main/"); 
+            history.push("/Main/Transactions"); 
         }
         if(ant!=undefined){ 
         const g= async()=>{
                     console.log(idd);
                     // const response=await api2.delete(`./requestmoney/${idd}`);
-                    axios.delete("https://appbankiiits.herokuapp.com/req/"+idd,{ headers: {"token":token} }).then((res)=>{
+                    axios.delete("http://localhost:5000/req/"+idd,{ headers: {"token":token} }).then((res)=>{
                     }).catch((err)=>{
                       console.log(idd,"err fail---1");
 //                      response.status(400).json("req does not exist");
@@ -71,7 +72,7 @@ function SendMoney(){
                     })
                 }
                 g();
-                history.push("/Main");   
+                history.push("/Main/Transactions");   
         }
         }).catch((err)=>{
             console.log(err);
@@ -81,7 +82,7 @@ function SendMoney(){
       }
 
     const gu=async()=>{
-        const st="https://appbankiiits.herokuapp.com/users/"+store.getState().user;
+        const st="http://localhost:5000/users/"+store.getState().user;
         let all;
         let p;
         var f={};
@@ -123,11 +124,7 @@ function SendMoney(){
 
             }
             console.log(all);
-            if(username!=undefined)
-            addUserHandler(all.acc,username)  
-            else
-            addUserHandler(all.acc,ant) 
-        
+            
 
             // first patch
             const req=all.balance;
@@ -136,11 +133,11 @@ function SendMoney(){
 
            if(username!=null)
            {
-               p="https://appbankiiits.herokuapp.com/users/"+username;
+               p="http://localhost:5000/users/"+username;
 
            }
            else
-           p="https://appbankiiits.herokuapp.com/users/"+ant;
+           p="http://localhost:5000/users/"+ant;
            axios.get(p,{ headers: {"token":token} }).then((res)=>{
             all=res.data;
             console.log(all);
@@ -169,17 +166,28 @@ function SendMoney(){
             // second patch
                 const obj={
                     "from":req,
+                    "f":fa, 
+                    "t":ta,
                     "to":to
                 };
             
-            const t="https://appbankiiits.herokuapp.com/dbt/"+fa+"/"+ta;
-
+            const t="http://localhost:5000/dbt";
+                console.log()
+                if(username!=undefined)
+            addUserHandler(all.acc,username)  
+            else
+            addUserHandler(all.acc,ant) 
+        
             axios.patch(t,obj,{ headers: {"token":token} }).then((res)=>{
                 console.log(res);
             }).catch((err)=>{
+                if(err)
+                alert("invalid username");
                 console.log(err);
             })
            }   ).catch((err)=>{
+            if(err)
+            alert("invalid username");
             console.log(err);
            })
            console.log(f);
