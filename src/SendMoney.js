@@ -174,9 +174,9 @@ function SendMoney(){
             const t="https://appbankiiits.herokuapp.com/dbt";
                 console.log()
                 if(username!=undefined)
-            addUserHandler(all.acc,username)  
+            addUserHandler(fa,username)  
             else
-            addUserHandler(all.acc,ant) 
+            addUserHandler(fa,ant) 
         
             axios.patch(t,obj,{ headers: {"token":token} }).then((res)=>{
                 console.log(res);
